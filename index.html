@@ -95,6 +95,18 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      animation: hero-enter 500ms ease-out both;
+    }
+
+    @keyframes hero-enter {
+      from {
+        opacity: 0;
+        transform: translateY(0.75rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero-badge {
@@ -124,6 +136,13 @@
       background: var(--light-bronze);
       text-decoration: none;
       border-radius: 0.25rem;
+      transition: transform 160ms ease, background-color 160ms ease;
+    }
+
+    .hero-button:hover,
+    .hero-button:focus-visible {
+      background: var(--tea-green);
+      transform: translateY(-2px);
     }
 
     .featured-drinks {
@@ -139,6 +158,13 @@
       overflow: hidden;
       background: var(--papaya-whip);
       border-radius: 0.35rem;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .drink-card:hover,
+    .drink-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 0.5rem 1rem rgba(47, 48, 37, 0.14);
     }
 
     .drink-card img {
@@ -232,6 +258,15 @@
       .featured-drinks,
       .info-row {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero,
+      .hero-button,
+      .drink-card {
+        animation: none;
+        transition: none;
       }
     }
   </style>
