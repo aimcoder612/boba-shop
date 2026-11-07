@@ -5,14 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pearl Street Boba</title>
   <style>
+    :root {
+      --forest: #2f6f5e;
+      --forest-dark: #183b32;
+      --cream: #f7f4ef;
+      --ink: #21312c;
+      --paper: #ffffff;
+      --line: #d9e1dc;
+      --mint: #e7f0eb;
+      --coral: #d86f4d;
+    }
+
     body {
       margin: 0;
       padding: 1.5rem;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 1rem;
       line-height: 1.5;
-      color: #222;
-      background: #f7f7f7;
+      color: var(--ink);
+      background: var(--cream);
     }
 
     .site-header {
@@ -22,11 +33,11 @@
       gap: 1rem;
       margin-bottom: 1.5rem;
       padding-bottom: 1rem;
-      border-bottom: 1px solid #d8d8d8;
+      border-bottom: 1px solid var(--line);
     }
 
     .site-name {
-      color: #2f6f5e;
+      color: var(--forest-dark);
       font-weight: bold;
       text-decoration: none;
     }
@@ -38,7 +49,7 @@
     }
 
     .site-nav a {
-      color: #2f6f5e;
+      color: var(--forest-dark);
       text-decoration: none;
     }
 
@@ -70,11 +81,22 @@
       margin: -1.5rem -1.5rem 2rem;
       padding: 3rem 1.5rem;
       color: #fff;
-      background: linear-gradient(rgba(47, 111, 94, 0.78), rgba(47, 111, 94, 0.78)), url("images/hero.jpg") center 42% / cover;
+      background: linear-gradient(rgba(24, 59, 50, 0.84), rgba(24, 59, 50, 0.84)), url("images/hero.jpg") center 42% / cover;
       min-height: 20rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+
+    .hero-badge {
+      align-self: flex-start;
+      margin-bottom: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      color: #fff;
+      background: var(--coral);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: bold;
     }
 
     .hero h1 {
@@ -89,8 +111,8 @@
     .hero-button {
       display: inline-block;
       padding: 0.65rem 1rem;
-      color: #2f6f5e;
-      background: #fff;
+      color: #fff;
+      background: var(--coral);
       text-decoration: none;
       border-radius: 0.25rem;
     }
@@ -106,7 +128,7 @@
     .drink-card {
       margin: 0;
       overflow: hidden;
-      background: #fff;
+      background: var(--paper);
       border-radius: 0.35rem;
     }
 
@@ -138,7 +160,7 @@
 
     .info-block {
       padding: 1rem;
-      background: #fff;
+      background: var(--paper);
       border-radius: 0.35rem;
     }
 
@@ -157,9 +179,9 @@
     footer {
       margin-top: 2.5rem;
       padding: 1.5rem;
-      border-top: 1px solid #d8d8d8;
+      border-top: 1px solid var(--line);
       color: #555;
-      background: #fff;
+      background: var(--paper);
     }
 
     .footer-grid {
@@ -170,7 +192,7 @@
 
     footer h3 {
       margin: 0 0 0.5rem;
-      color: #222;
+      color: var(--forest-dark);
       font-size: 1rem;
     }
 
@@ -181,7 +203,7 @@
     .footer-bottom {
       margin-top: 1rem;
       padding-top: 1rem;
-      border-top: 1px solid #e4e4e4;
+      border-top: 1px solid var(--line);
     }
 
     @media (max-width: 42rem) {
@@ -217,6 +239,7 @@
   </header>
 
   <section class="hero">
+    <span class="hero-badge">Fresh daily</span>
     <h1>Fresh boba, made your way.</h1>
     <p>Handcrafted tea and chewy pearls, right near campus.</p>
     <a class="hero-button" href="#menu">View the menu</a>
